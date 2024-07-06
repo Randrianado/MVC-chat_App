@@ -1,11 +1,9 @@
 <?php
-    require_once'../config/config.php';
-
+    require_once'../config/config.php';    
     $url=isset($_GET['url']) ? $_GET['url'] : null;
-    $url=rtrim($url,'/');
+    $url1=rtrim($url,'/');
     $rl=filter_var($url,FILTER_SANITIZE_URL);
-    $params=explode('/',$url);
-
+    $params=explode('/',$url1);
     $controller=isset($params[0]) ? $params[0] : null;
     $action=isset($params[1]) ? $params[1] : null;
 
